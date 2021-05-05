@@ -1,12 +1,13 @@
 /* 
-    Ejemplos de tipos de datos en JavaScript
-*/
+    Ejemplos de tipo de datos en JavaScript
+ */
 
 // Tipo de dato string
-var nombre = "Paz";
+var nombre = "Carlos";
 console.log(nombre);
+console.log(typeof nombre);
 
-nombre = 11.5;
+nombre = 10;
 console.log(typeof nombre);
 
 // Tipo de dato numérico
@@ -16,49 +17,58 @@ console.log(numero);
 // Tipo de dato object
 var objeto = {
     nombre : "Juan",
-    apellido : "Perez",
-    telefono : "114032042"    
-};
+    apellido : "Gomez",
+    telefono : "114433222"
+} 
+console.log(objeto);
 console.log(typeof objeto);
 
 // Tipo de dato boolean (true, false)
 var bandera = false;
+console.log(bandera);
 console.log(typeof bandera);
 
-//  Tipo de dato function
-//  Una función nos permite reutilizar líneas de código 
-function miFuncion(){}
-console.log(typeof miFuncion)
+// Tipo de dato function
+function miFuncion(){};
+console.log(miFuncion);
+console.log(typeof miFuncion);
 
-//  Tipo de dato Symbol
-var simbolo = Symbol("mi simbolo");
+// Tipo de dato Symbol
+var simbolo = Symbol("Mi simbolo");
+console.log(simbolo);
 console.log(typeof simbolo);
 
-//  Tipo clase es una function
-class Persona {
+// Tipo clase es una function
+class Persona{
     constructor(nombre, apellido){
         this.nombre = nombre;
         this.apellido = apellido;
     }
 }
+console.log(Persona);
 console.log(typeof Persona);
 
-//  Undefined es un valor que se puede asignar a una variable y un tipo de dato
+// Tipo de dato undefined. Este tipo de dato viene automáticamente cuando definimos cualquier tipo de variable 
 var x;
+console.log(x);
 console.log(typeof x);
 
 x = undefined;
+console.log(x);
 console.log(typeof x);
+// Undefined es un valor de variable y también un tipo de dato
 
-//  null = ausencia de valor
+// null = ausencia de valor
 var y = null;
+console.log(y);
 console.log(typeof y);
+// null no es un nuevo tipo de dato, sino es un tipo object
 
-// Los arreglos en JavaScript son de tipo object
-var autos = ['BMW', 'Audi', 'Volvo'];
+// Arreglos
+var autos = ['BMW', 'Audi', 'Ford']; 
+console.log(autos);
 console.log(typeof autos);
 
-//  Una cadena vacía no es un tipo de dato, sino un valor que podemos asignar 
 var z = '';
 console.log(z);
 console.log(typeof z);

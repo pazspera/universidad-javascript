@@ -1,4 +1,3 @@
-var nombre = "Batman";
+var nombre = "Paz";
 
 console.log(nombre);
-

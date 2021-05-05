@@ -13,9 +13,9 @@ const alterego = "Batman";
 //alterego = "Superman";
 
 
-// Buenas prácticas para nombres de Variables
-/* let nombreCompleto = "Juan Perez";
-console.log( nombreCompleto ); */
+// Buenas prácticas para nombres de Variables (Camelcase)
+let nombreCompleto2 = "Juan Perez";
+console.log(nombreCompleto2);
 
 let x, y;
 x = 10, y = 15;
@@ -37,6 +37,7 @@ console.log( nombrecompleto);
  */
 
 let a1nombreCompleto;
+let _1nombreCompleto;
 let _nombreCompleto;
 let $nombreCompleto;
 //let 1nombreCompleto;
