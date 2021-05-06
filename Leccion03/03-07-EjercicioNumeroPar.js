@@ -1,0 +1,9 @@
+// Definir si el valor de una variable es divisible por 2
+let a = 10;
+
+if(a % 2 == 0) {
+    console.log("Es un número par");
+}
+else {
+    console.log("Es un número impar");
+}
