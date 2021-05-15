@@ -115,3 +115,5 @@ console.log( cliente1.toString() );
 
 let cliente2 = new Cliente('Ana', 'Gomez', 34, new Date());
 console.log( cliente2.toString() );
+
+
