@@ -118,6 +118,7 @@ class Orden {
     mostrarOrden(){
         let resumenOrden = '';
         for(let computadoras of this._computadoras){
+            // Usar template string en vez de llamar a toString()
             resumenOrden = resumenOrden + this._computadoras.toString();
             // resumenOrden += `\n ${this._Computadora.toString()}`; 
         }
