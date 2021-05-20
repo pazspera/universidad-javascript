@@ -31,7 +31,7 @@ function determinarTipo(tipo){
     Si preguntamos si es de la clase Empleado, va a imprimir para la clase Empleado y
     para la clase Gerente porque la clase Gerente es hija de la clase Empleado
 
-    instaceof responde que sí al mismo tipo a la clase padre, no responde que sí
+    instanceof responde que sí al mismo tipo a la clase padre, no responde que sí
     a clases hijas. Por eso si ponemos instanceof Gerente, imprime en Gerente y 
     no en Empleado
     */
