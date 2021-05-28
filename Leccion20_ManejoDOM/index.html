@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
+    <p id="parrafo">Saludos!</p>
+
+    <script>
+        let cabecero = document.getElementById('cabecero').innerHTML;
+        // Esto nos regresa un objeto, el objeto h1, pero no podemos acceder a sus valores
+        // Con la propiedad innerHTML accedemos al texto html, al contenido del elemento
+        console.log('Valor cabecero: ' + cabecero);
+
+        let parrafo = document.getElementById('parrafo').innerHTML;
+        console.log('Valor parrafo: ' + parrafo);
+
+        // Si sacamos innerHTML, la variable cabecero2 no contiene el valor del texto, sino que contiene
+        // todo el elemento h1
+        // Al mandarlo a imprimir, vemos que imprime el objeto con su tipo
+        let cabecero2 = document.getElementById('cabecero');
+        let parrafo2 = document.getElementById('parrafo');
+        console.log('Objeto cabecero: ' + cabecero2);
+        console.log('Objeto parrafo: ' + parrafo2);
+
+        // Otra forma de acceder al texto sería primero recuperar el elemento y después acceder al texto
+        let cabecero3 = document.getElementById('cabecero');
+        console.log('Valor cabecero: ' + cabecero3.innerHTML);
+        
+        console.log('Saludos desde JavaScript');
+    </script>
+
+</body>
+</html>

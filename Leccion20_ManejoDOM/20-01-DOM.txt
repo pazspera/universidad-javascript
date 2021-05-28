@@ -1,0 +1,16 @@
+DOCUMENT OBJECT MODEL (DOM)
+
+Al trabajar con html vamos a utilizar etiquetas (html, body, head, etc)
+Dentro de cada etiqueta podemos tener distintos elementos. Por ejemplo, en el head podemos tener un título
+y una cadena que muestre el título del head
+Todos los elementos componen el DOM
+
+Cuando se trabaja desde JavaScript, cada uno de estos elementos es un objeto
+El objeto principal que va a acceder a nuestro Document Object Model es el objeto document
+Es el elemento que vamos a usar para manipular nuestro documento html
+A través de este objeto vamos a poder interactuar con todos los elementos del DOM
+
+Como cada elemento es un objeto (desde JavaScript), cada uno va a contener atributos, propiedades y métodos
+Vamos a poder acceder a los atributos y métodos de cada elemento 
+
+
