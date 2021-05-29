@@ -7,8 +7,9 @@
     <title>Ejemplo DOM con JavaScript</title>
 </head>
 <body>
-    <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
+    <h1 id="cabecero">Ejemplo 1 DOM con JavaScript</h1>
     <p id="parrafo">Saludos!</p>
+
 
     <script>
         let cabecero = document.getElementById('cabecero').innerHTML;
@@ -31,8 +32,10 @@
         let cabecero3 = document.getElementById('cabecero');
         console.log('Valor cabecero: ' + cabecero3.innerHTML);
         
-        console.log('Saludos desde JavaScript');
+        // Es posible usar template literals para devolver cadenas
+        console.log(`Valor cabecero template literal: ${cabecero.innerHTML}`);
+        console.log(`Valor parrafo template literal: ${parrafo.innerHTML}`);
+        console.log(`Prueba: ${cabecero.innerHTML}`);
     </script>
-
 </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 - Template literal/Modificar contenido</title>
+</head>
+<body>
+    <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
+    <p id="parrafo">Saludos!</p>
+
+
+    <script>
+        // Es posible usar template literals para devolver cadenas
+        let cabecero = document.getElementById('cabecero');
+        console.log(`Valor cabecero: ${cabecero.innerHTML}`);
+
+        let parrafo = document.getElementById('parrafo');
+        console.log(`Valor parrafo: ${parrafo.innerHTML}`);
+
+        // Con innerHTML no solo podemos leer el contenido de los elementos html, también podemos
+        // modificarlo
+        parrafo.innerHTML = 'Nuevo valor del párrafo';
+        cabecero.innerHTML = 'Nuevo cabecero';
+    </script>
+</body>
+</html>

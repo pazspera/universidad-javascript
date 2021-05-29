@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 - getElementsByTagName</title>
+</head>
+<body>
+    <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
+    <p >Saludos!</p>
+    <p >Otro párrafo</p>
+
+
+    <script>
+        // Agregamos un párrafo adicional. Para recuperar estos párrafos uno a uno tendríamos que usar
+        // el método getElementById. 
+        // Otra forma de recuperar los párrafos es por el tipo de elemento html que tenemos
+        // con getElementsByTagName
+        let parrafos = document.getElementsByTagName('p');
+        console.log(`Número de párrafos: ${parrafos.length}`);
+        // Tenemos que usar una etiqueta html válida para que getElementsByTagName funcione
+        // Si borramos los id de los párrafos podemos acceder igual porque busca por tag
+
+        // Podemos usar un ciclo for para iterar estos elementos
+        for(let i=0; i < parrafos.length; i++){
+            console.log(`${i} - ${parrafos[i].innerHTML}`);
+        }
+    </script>
+</body>
+</html>
