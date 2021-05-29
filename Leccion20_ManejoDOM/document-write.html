@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body>
+    <!-- Formas de modificar elementos html -->
+    <h1>Manejo DOM con JavaScript</h1>
+    <button onclick="mostrar()">Mostrar</button>
+    <br>
+    
+    <script>
+        // Mandar info a la salida del documento html
+        document.write('Saludos desde JavaScript');
+        // Hay que tener cuidado porque este método sobreescribe toda la información que tuviéramos
+        // previamente a este mensaje
+        function mostrar(){
+            document.write('Adios');
+        }
+        // Una vez que usamos document.write después de que se cargó el documento, se sobreescribe
+        // toda la info y se manda el último mensaje que utilizamos de document.write
+    </script>
+</body>
+</html>

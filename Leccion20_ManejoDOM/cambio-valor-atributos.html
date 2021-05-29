@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio del valor de los atributos del DOM</title>
+</head>
+<body>
+    <!-- Modificar atributos elementos HTML -->
+
+    <!-- Vamos a usar una img, le asignamos una img al src inicialmente y cuando le damos click 
+         a un botón vamos a cambiar la img asignando un nuevo valor al atributo src -->
+    <h1 id="titulo">Manejo DOM con JavaScript</h1>
+    <button onclick="mostrar()">Mostrar</button>
+    <br>
+    <img id="imagen" src="javascript.png">
+    <script>
+        // Cambiamos el src de la img con mostrar()
+        function mostrar(){
+            document.getElementById('imagen').src = 'html5.png';
+        }
+    </script>
+</body>
+</html>

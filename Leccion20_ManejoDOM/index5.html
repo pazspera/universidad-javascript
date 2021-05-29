@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 - querySelectorAll</title>
+    <style>
+        .azul {
+            color:blue; 
+        }
+    </style>
+</head>
+<body>
+    <h1 class="azul">Ejemplo DOM con JavaScript</h1>
+    <p class="azul">Saludos!</p>
+    <p class="azul">Otro párrafo</p>
+
+
+    <script>
+        // En lugar del método getElementsByClassName, que recupera todos los elementos html que tenga
+        // asignada esta clase, podemos usar el método querySelectorAll donde especificamos la 
+        // clase css y el elemento html que queremos recuperar
+        let elementos = document.querySelectorAll('p.azul'); 
+        // Buscamos los p que tengan la clase azul
+        console.log(`Número de elementos: ${elementos.length}`);
+
+        for(let elemento of elementos){ 
+            console.log(`${elemento.innerHTML}`);
+        }
+    </script>
+</body>
+</html>
