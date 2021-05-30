@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo Eventos</title>
+</head>
+<body>
+    <!-- Asignamos un evento al título y cuando damos click en el titulo, cambia el texto -->
+    <!-- El this está apuntando al objeto h1 y puede acceder a sus atributos y métodos -->
+    <h1 onclick="this.innerHTML='Nuevo título'">Manejo DOM con JavaScript</h1>
+    <!-- No es una buena práctica tener el código JS directamente, sino en un método -->
+    <!-- Llamamos al método cambiarTexto, le pasamos la referencia del elemento que se está 
+         trabajando en este momento (h2) y le cambiamos el atributo innerHTML con el nuevo texto -->
+    <h2 onclick="cambiarTexto(this)">Cambio título con método</h2>
+    <br>
+
+    <script>
+        function cambiarTexto(titulo){
+            console.log(titulo);
+            console.log(titulo.innerHTML);
+            titulo.innerHTML = 'Cambiamos el título';
+            console.log(titulo.innerHTML);
+        }
+    </script>
+</body>
+</html>

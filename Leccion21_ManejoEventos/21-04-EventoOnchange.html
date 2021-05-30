@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onchange</title>
+</head>
+<body>
+    <!-- El evento onchange lo vamos a usar cuando queremos capturar los valores de un campo de texto
+         o los elementos de un formulario -->
+    <h1 id="titulo">Eventos onchange</h1>
+    <br>
+    <!-- Agregamos un input, cuando hay un cambio en el input, el contenido pasa a mayúsculas -->
+    Nombre: <input type="text" onchange="convertir(this)">    
+
+
+    <script>
+        // Pasamos el input a través del objeto this
+        function convertir(nombreInput){
+            nombreInput.value = nombreInput.value.toUpperCase();
+        }        
+    </script>
+</body>
+</html>

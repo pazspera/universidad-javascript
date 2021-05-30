@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegación Eventos</title>
+</head>
+<body>
+    <!-- Esto es una simplificación del ejercicio anterior
+         Podemos aplicar estos estilos a todos los elementos de tipo input y simplificar el código -->
+
+    <h1 id="titulo">Delegación Eventos</h1>
+    <br>
+    <!-- Primero, todos los input tienen que estar en un form -->
+    <form id='forma'>
+        Nombre: <input type="text" id="nombre">
+        <br>
+        <br>
+        Apellido: <input type="text" id="apellido">
+    </form>
+
+
+    <script>
+        // En vez de recuperar los elementos por separado, recuperamos el formulario para aplicar
+        // los eventos a todos los elementos del formulario
+        const forma =  document.getElementById('forma');
+        
+        // Como definimos los cambios para todo el formulario, es conveniente usar la función flecha
+        // en vez de recuperar elementos individuales y trabajar con las funciones
+        // Es más conveniente porque no hay que reutilizar código
+
+        // Para que funcione falta agregar un parámetro más a addEventListener para que lo que 
+        // configuramos para el elemento forma se aplique también a los elementos input
+        forma.addEventListener('focus', (evento)=> {
+            evento.target.style.background = 'red';
+        }, true);
+        // El true indica que lo que agregamos para forma se aplique también a elementos internos
+        // El valor por default es false y con false no se delega el manejo de eventos 
+        // del elemento externo a los elementos internos
+        forma.addEventListener('blur', (evento)=>{
+            evento.target.style.background = 'white';
+        }, true);
+
+    </script>
+</body>
+</html>

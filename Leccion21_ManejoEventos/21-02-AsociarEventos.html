@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociar Eventos</title>
+</head>
+<body>
+    <!-- Vimos que a nuestros elementos html le podemos asociar una funcion a un evento 
+         (al evento onclick le asociamos la función cambiarTexto) 
+         También podemos hacer esto directamente desde JavaScript -->    
+
+    <!-- Cuando hacemos click en el título vamos a mostrar un mensaje en un nuevo div -->
+         <h1 id="titulo">Asociar eventos del DOM</h1>
+         <br>
+         <div id="mostrar"></div>
+
+    <script>
+        document.getElementById('titulo').onclick = cambiarTexto;
+        /* Asignamos la referencia a la función, no la mandamos a llamar, por eso no usamos () 
+           Es una función callback */
+        
+        function cambiarTexto(){
+            document.getElementById('mostrar').innerHTML = 'Nuevo contenido';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onfocus y onblur</title>
+</head>
+<body>
+    <!-- onfocus: cuando damos click en una caja de texto, vamos a capturar el input para cambiar
+         el bg del input text
+         onblur: cuando sacamos el foco del elemento, va a regresar el color de fondo del 
+         input text a blanco (onblur se ejecuta cuando el elemento pierde el foco) -->
+
+    <h1 id="titulo">
+        Evento onfocus y onblur
+    </h1>
+    <br>
+    Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+    <br>
+    <br>
+    Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+    <script>
+        function cambiar(elementoInput){
+            elementoInput.style.background = 'yellow';
+        }
+        function regresar(elementoInput){
+            elementoInput.style.background = 'white';
+        }
+    </script>
+</body>
+</html>

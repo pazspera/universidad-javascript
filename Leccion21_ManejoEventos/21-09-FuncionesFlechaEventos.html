@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Flecha con Eventos</title>
+</head>
+<body>
+    <!-- Podemos usar funciones flecha en vez de definir funciones por separado, como en el ej anterior
+         Lo que sí, con esto no podremos reutilizar el código
+         
+         La función flecha la aplicamos en el input nombre solamente -->
+
+    <h1 id="titulo"> Funciones Flecha con Eventos </h1>
+    <br>
+    Nombre: <input type="text" id="nombre">
+    <br>
+    <br>
+    Apellido: <input type="text" id="apellido">
+
+
+    <script>
+        // Usamos función flecha en vez de asociar la función cambiar
+        document.getElementById('nombre').addEventListener('focus', (evento)=> {
+            evento.target.style.background = 'red';
+        });
+        document.getElementById('nombre').addEventListener('blur', (evento)=>{
+            evento.target.style.background = 'white';
+        });
+
+        document.getElementById('apellido').addEventListener('focus', cambiar);
+        document.getElementById('apellido').addEventListener('blur', regresar);
+
+        function cambiar(evento){
+            let componente = evento.target;
+            componente.style.background = 'yellow';
+        }
+
+        function regresar(evento){
+            evento.target.style.background = 'white';
+        }
+    </script>
+</body>
+</html>

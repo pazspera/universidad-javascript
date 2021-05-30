@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento addEventListener</title>
+</head>
+<body>
+    <!-- En el ejercicio anterior configuramos los eventos onfocus y onblur de los input
+         No necesariamente tenemos que configurarlos en los elementos html, los podemos configurar
+         desde JavaScript
+         Esto va a limpiar nuestro código html 
+
+         Lo que vamos a hacer en este ejercicio es el mismo cambio de color de fondo -->
+
+    <h1 id="titulo"> addEventListener </h1>
+    <br>
+    Nombre: <input type="text" id="nombre">
+    <br>
+    <br>
+    Apellido: <input type="text" id="apellido">
+
+
+    <script>
+        // Usamos el método addEventListener para agregar uno o más eventos al componente que 
+        // estamos recuperando
+        // Cuando lo usamos así ponemos solamente el nombre del evento, es decir, focus en vez de onfocus
+        // Agregamos la referencia a la función cambiar pero no la mandamos a llamar
+        document.getElementById('nombre').addEventListener('focus', cambiar);
+        document.getElementById('nombre').addEventListener('blur', regresar);
+
+        document.getElementById('apellido').addEventListener('focus', cambiar);
+        document.getElementById('apellido').addEventListener('blur', regresar);
+
+        function cambiar(evento){
+            // evento.target funciona igual que el this, recupera el input
+            let componente = evento.target;
+            componente.style.background = 'yellow';
+        }
+
+        function regresar(evento){
+            evento.target.style.background = 'white';
+        }
+    </script>
+</body>
+</html>
